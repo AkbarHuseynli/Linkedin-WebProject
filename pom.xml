@@ -14,6 +14,7 @@
         <module>logging-service</module>
         <module>job-service</module>
         <module>notification</module>
+        <module>authentication</module>
     </modules>
 
     <properties>
