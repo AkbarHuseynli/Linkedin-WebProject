@@ -7,6 +7,18 @@ spring:
         locator:
           enabled: true
       routes:
+        - id: employee
+          uri: http://localhost:8080
+          predicates:
+            - Path=/companies/**
+        - id: company
+          uri: http://localhost:8081
+          predicates:
+            - Path=/employees/**
+        - id: authentication
+          uri: http://localhost:8066
+          predicates:
+            - Path=/auth/**
 #eureka:
 #  client:
 #    register-with-eureka: false
