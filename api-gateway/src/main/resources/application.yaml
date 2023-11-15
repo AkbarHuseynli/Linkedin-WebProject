@@ -10,11 +10,11 @@ spring:
         - id: employee
           uri: http://localhost:8080
           predicates:
-            - Path=/companies/**
+            - Path=/employees/**
         - id: company
           uri: http://localhost:8081
           predicates:
-            - Path=/employees/**
+            - Path=/companies/**
         - id: authentication
           uri: http://localhost:8066
           predicates:
