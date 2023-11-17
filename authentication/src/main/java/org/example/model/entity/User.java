@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.model.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -6,7 +6,6 @@ import org.hibernate.annotations.Table;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Set;

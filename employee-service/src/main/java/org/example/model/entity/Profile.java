@@ -6,9 +6,9 @@ import lombok.experimental.FieldDefaults;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "profile")
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -19,30 +19,27 @@ public class Profile {
     @Column(name = "id")
     Integer id;
 
-    @Column(name = "username", nullable = false, unique = true)
-    String username;
-
-    @Column(name = "password", nullable = false)
-    String password;
-
-    @Column(name = "email", nullable = false)
+//    @Column(name = "email", nullable = false)
     String email;
 
-    @Column(name = "biography")
+//    @Column(name = "biography")
     String biography;
 
-    @Column(name = "degreeOfEducation")
+//    @Column(name = "degreeOfEducation")
     String degreeOfEducation;
 
-    @Column(name = "university")
+//    @Column(name = "university")
     String university;
 
-    @Column(name = "grade")
+//    @Column(name = "grade")
     int grade;
 
-    @Column(name = "yearOfWorkExperience")
+//    @Column(name = "yearOfWorkExperience")
     int yearOfWorkExperience;
 
-//    @OneToOne(mappedBy = "profile")
-//    User user;
+    boolean status;
+
+    @OneToOne(mappedBy = "profile")
+    //    @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    Employee employee;
 }

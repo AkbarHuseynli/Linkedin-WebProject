@@ -1,8 +1,8 @@
 package org.example.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.model.ERole;
-import org.example.model.Role;
+import org.example.model.entity.ERole;
+import org.example.model.entity.Role;
 import org.example.repository.RoleRepository;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;

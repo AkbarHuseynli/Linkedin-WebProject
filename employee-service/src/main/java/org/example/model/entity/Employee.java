@@ -2,29 +2,26 @@ package org.example.model.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
 @Getter
+@Builder
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
-    @Column(name = "username", nullable = false, unique = true)
-    String username;
+    String fullname;
 
-    @Column(name = "password", nullable = false)
-    String password;
+    int age;
 
-//    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "profile_id", referencedColumnName = "id")
-//    Profile profile;
+    Profile profile;
 }

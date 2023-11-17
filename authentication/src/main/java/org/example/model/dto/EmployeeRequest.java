@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.model.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class RegisterDTO {
+public class EmployeeRequest {
 
     @NotEmpty
     String username;
@@ -19,7 +19,5 @@ public class RegisterDTO {
     @Min(5)
     String password;
 
-    @NotEmpty
-    String typeOfUser;
 
 }

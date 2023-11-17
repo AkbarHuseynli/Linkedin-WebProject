@@ -1,7 +1,8 @@
 package org.example.security.auth;
 
 import lombok.RequiredArgsConstructor;
-import org.example.model.RegisterDTO;
+import org.example.model.dto.CompanyRequest;
+import org.example.model.dto.EmployeeRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +17,13 @@ public class AuthenticationController {
         return ResponseEntity.ok(authService.login(request));
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<AuthResponse> register(@RequestBody RegisterDTO request) {
-        return ResponseEntity.ok(authService.register(request));
+    @PostMapping("/register/company")
+    public ResponseEntity<AuthResponse> registerCompany(@RequestBody EmployeeRequest request) {
+        return ResponseEntity.ok(authService.registerEmployee(request));
+    }
+    @PostMapping("/register/employee")
+    public ResponseEntity<AuthResponse> registerEmployee(@RequestBody CompanyRequest request) {
+        return ResponseEntity.ok(authService.registerCompany(request));
     }
 
 

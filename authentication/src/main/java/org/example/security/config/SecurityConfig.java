@@ -25,7 +25,6 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth ->
                         auth
                                 .antMatchers("/auth/**").permitAll()
-                                .antMatchers("/employees/**").hasRole("EMPLOYEE")
                                 .antMatchers("/companies/**").hasRole("COMPANY")
                                 .anyRequest().authenticated())
 //                .formLogin(log->log.loginPage("/auth/login").permitAll())
