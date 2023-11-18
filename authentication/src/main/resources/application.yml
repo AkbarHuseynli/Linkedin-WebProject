@@ -10,5 +10,5 @@ spring:
     defer-datasource-initialization: false
     open-in-view: false
 server:
-  port: 8066
+  port: 8030
 secret: secretKeyExampleForJsonWebTokenAndSecurityServiceAndForUserJwtServiceForCreateJsonWebToken

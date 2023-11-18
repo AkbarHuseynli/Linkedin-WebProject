@@ -25,7 +25,6 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth ->
                         auth
                                 .antMatchers("/auth/**").permitAll()
-                                .antMatchers("/companies/**").hasRole("COMPANY")
                                 .anyRequest().authenticated())
 //                .formLogin(log->log.loginPage("/auth/login").permitAll())
 //                .logout(LogoutConfigurer::permitAll)

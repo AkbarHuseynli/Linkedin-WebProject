@@ -4,19 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.model.entity.Profile;
-
-import javax.persistence.*;
+import org.example.model.client.Employee;
+import java.util.List;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployeeRequest {
-    Integer id;
-
-    String fullname;
-
-    int age;
-
+public class CompanyDTO {
+    String name;
+    String email;
+    List<Employee> employees;
+    List<JobDTO> jobs;
 }

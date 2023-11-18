@@ -25,6 +25,8 @@ public class Profile {
 //    @Column(name = "biography")
     String biography;
 
+    String jobTitle;
+
 //    @Column(name = "degreeOfEducation")
     String degreeOfEducation;
 
