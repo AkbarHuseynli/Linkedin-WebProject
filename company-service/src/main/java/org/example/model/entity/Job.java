@@ -22,6 +22,8 @@ public class Job {
     private String title;
 
     private double salary;
+    ///Bigdecimal
+
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;

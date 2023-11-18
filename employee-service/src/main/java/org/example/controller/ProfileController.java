@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 public class ProfileController {
     private final ProfileService profileService;
     @PreAuthorize("hasRole('EMPLOYEE')")
+    //**redirect
+
     @PostMapping("/update/{employeeId}")
     public void updateProfile(@PathVariable int employeeId, @RequestBody ProfileDTO profileDTO){
         profileService.updateProfile(employeeId, profileDTO);
